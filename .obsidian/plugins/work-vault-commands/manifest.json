@@ -1,0 +1,9 @@
+{
+  "id": "work-vault-commands",
+  "name": "Work Vault Commands",
+  "version": "1.2.24",
+  "minAppVersion": "1.13.0",
+  "description": "Adds Markdown-first Daily task, navigation, checkpoint, and Jotting commands.",
+  "author": "Work Vault",
+  "isDesktopOnly": true
+}

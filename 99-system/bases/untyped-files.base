@@ -1,0 +1,17 @@
+filters:
+  and:
+    - file.ext == "md"
+    - "!type"
+    - not:
+        - file.path == "README.md"
+        - file.path == "AGENTS.md"
+        - file.inFolder("99-system")
+        - file.inFolder("local-only")
+        - file.inFolder("00-inbox/agent-drafts")
+views:
+  - type: table
+    name: Untyped
+    order:
+      - file.name
+      - file.folder
+      - file.mtime

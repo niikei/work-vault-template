@@ -1,0 +1,27 @@
+filters:
+  and:
+    - file.ext == "md"
+    - type == "living-document"
+    - not:
+        - file.inFolder("90-archive")
+        - file.inFolder("99-system")
+        - file.inFolder("local-only")
+views:
+  - type: table
+    name: Recently updated
+    filters:
+      and:
+        - file.mtime > now() - "30d"
+    order:
+      - file.folder
+      - file.name
+      - updated
+      - file.mtime
+    limit: 20
+  - type: table
+    name: All
+    order:
+      - file.name
+      - file.folder
+      - updated
+      - file.mtime

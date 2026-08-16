@@ -1,0 +1,27 @@
+.side-dock-ribbon.mod-left {
+  --ribbon-width: 48px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.side-dock-ribbon.mod-left .side-dock-actions {
+  gap: 0;
+}
+
+.side-dock-ribbon.mod-left .side-dock-ribbon-action {
+  --icon-size: 24px;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  padding: 12px;
+}
+
+.side-dock-ribbon.mod-left .side-dock-ribbon-action svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Bases remains enabled for existing .base views; hide only its create action. */
+.side-dock-ribbon.mod-left .side-dock-ribbon-action:has(svg.lucide-layout-list) {
+  display: none;
+}

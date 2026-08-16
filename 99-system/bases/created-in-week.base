@@ -1,0 +1,12 @@
+filters:
+  and:
+    - file.ext == "md"
+    - created >= this.week_start
+    - created < this.week_start + "7d"
+views:
+  - type: table
+    name: Created in week
+    order:
+      - file.name
+      - type
+      - created

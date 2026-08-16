@@ -1,0 +1,15 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'file.inFolder("00-inbox")'
+    - not:
+        - 'file.path == "00-inbox/Inbox.md"'
+        - 'file.inFolder("00-inbox/agent-drafts")'
+views:
+  - type: table
+    name: Inbox
+    order:
+      - file.name
+      - type
+      - created
+      - file.mtime

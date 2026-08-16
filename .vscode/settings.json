@@ -1,0 +1,11 @@
+{
+  "js/ts.experimental.useTsgo": true,
+  "js/ts.tsdk.path": ".obsidian/plugins/work-vault-commands/node_modules/typescript",
+  "workbench.editorAssociations": {
+    "*.md": "default",
+    "*.markdown": "default"
+  },
+  "files.associations": {
+    "**/.obsidian/app.json": "plaintext"
+  }
+}

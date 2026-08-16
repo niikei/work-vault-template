@@ -1,0 +1,42 @@
+# Obsidian device-local state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+.obsidian/graph.json
+.obsidian/cache/
+.obsidian/plugins/*
+!.obsidian/plugins/work-vault-commands/
+!.obsidian/plugins/work-vault-commands/**
+.obsidian/.trash/
+
+# OS and editor files
+.DS_Store
+.trash/
+*.swp
+*.swo
+*~
+~$*
+
+# Local-only material: excluded from Git, but not encrypted
+local-only/*
+!local-only/README.md
+
+# Credentials and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+credentials*.json
+service-account*.json
+secrets*
+
+# Generated dependencies and caches
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+dist/
+build/

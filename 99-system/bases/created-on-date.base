@@ -1,0 +1,11 @@
+filters:
+  and:
+    - file.ext == "md"
+    - created == this.date
+views:
+  - type: table
+    name: Created on date
+    order:
+      - file.name
+      - type
+      - created

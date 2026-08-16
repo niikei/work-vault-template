@@ -1,0 +1,229 @@
+.work-vault-explorer-icon {
+  align-self: center;
+  align-items: center;
+  color: var(--text-muted);
+  display: flex;
+  flex: 0 0 16px;
+  height: 16px;
+  justify-content: center;
+  margin-inline-end: 6px;
+  pointer-events: none;
+  width: 16px;
+}
+
+.work-vault-explorer-icon svg {
+  height: 16px;
+  stroke-width: 2;
+  width: 16px;
+}
+
+.nav-folder-title:hover>.work-vault-explorer-icon,
+.nav-file-title:hover>.work-vault-explorer-icon,
+.nav-file-title.is-active>.work-vault-explorer-icon {
+  color: var(--text-normal);
+}
+
+/* Three-state checklist appearance adapted from Minimal.
+   Copyright (c) 2020-2024 Steph Ango (@kepano), MIT License.
+   https://github.com/kepano/obsidian-minimal */
+.markdown-source-view.mod-cm6 input.task-list-item-checkbox,
+.markdown-preview-view input.task-list-item-checkbox,
+.markdown-preview-view input[type="checkbox"][data-task],
+.markdown-preview-view li.task-list-item>input[type="checkbox"],
+.markdown-preview-view li.task-list-item>p>input[type="checkbox"] {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.markdown-source-view.mod-cm6 input.task-list-item-checkbox:hover,
+.markdown-preview-view input.task-list-item-checkbox:hover,
+.markdown-preview-view input[type="checkbox"][data-task]:hover,
+.markdown-preview-view li.task-list-item>input[type="checkbox"]:hover,
+.markdown-preview-view li.task-list-item>p>input[type="checkbox"]:hover {
+  transform: scale(1.08);
+}
+
+.markdown-source-view.mod-cm6 input.task-list-item-checkbox[data-task="/"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"] input.task-list-item-checkbox,
+.markdown-preview-view input[type="checkbox"][data-task="/"],
+.markdown-preview-view li[data-task="/"]>input[type="checkbox"],
+.markdown-preview-view li[data-task="/"]>p>input[type="checkbox"] {
+  --wvc-checkbox-fill: var(--checkbox-color, var(--interactive-accent));
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(
+    90deg,
+    var(--wvc-checkbox-fill) 0%,
+    var(--wvc-checkbox-fill) 50%,
+    transparent 50%,
+    transparent 100%
+  ) !important;
+  border-color: var(--wvc-checkbox-fill) !important;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.markdown-source-view.mod-cm6 input.task-list-item-checkbox[data-task="/"]::after,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"] input.task-list-item-checkbox::after,
+.markdown-preview-view input[type="checkbox"][data-task="/"]::after,
+.markdown-preview-view li[data-task="/"]>input[type="checkbox"]::after,
+.markdown-preview-view li[data-task="/"]>p>input[type="checkbox"]::after {
+  -webkit-mask-image: none !important;
+  content: none !important;
+  display: none !important;
+  mask-image: none !important;
+}
+
+/* In Live Preview, only the line's data-task is the current state.
+   Mirror Obsidian 1.13's native checked-checkbox appearance for [x]. */
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"] input.task-list-item-checkbox,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] input.task-list-item-checkbox {
+  background-color: var(--checkbox-color);
+  border-color: var(--checkbox-color);
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"] input.task-list-item-checkbox::after,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] input.task-list-item-checkbox::after {
+  -webkit-mask-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate%28-4.000000, -6.000000%29" fill="%23000000"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
+  -webkit-mask-position: 52% 52%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 65%;
+  background-color: var(--checkbox-marker-color);
+  content: "";
+  display: block;
+  height: var(--checkbox-size);
+  inset-inline-start: -1px;
+  position: absolute;
+  top: -1px;
+  width: var(--checkbox-size);
+}
+
+@media (hover: hover) {
+  .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"] input.task-list-item-checkbox:hover,
+  .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] input.task-list-item-checkbox:hover {
+    background-color: var(--checkbox-color-hover);
+    border-color: var(--checkbox-color-hover);
+  }
+}
+
+/* CodeMirror may reuse a previously checked input after [x] becomes [ ]. */
+.markdown-source-view.mod-cm6 .HyperMD-task-line:not([data-task="/"]):not([data-task="x"]):not([data-task="X"]) input.task-list-item-checkbox {
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: var(--checkbox-border-color) !important;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-task-line:not([data-task="/"]):not([data-task="x"]):not([data-task="X"]) input.task-list-item-checkbox::after {
+  content: none !important;
+  display: none !important;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"] *,
+.markdown-preview-view li.task-list-item[data-task="/"],
+.markdown-preview-view li.task-list-item[data-task="/"].is-checked {
+  color: var(--text-normal);
+  text-decoration: none !important;
+}
+
+/* ── Calendar view ───────────────────────────────────────── */
+
+.wvc-container {
+  padding: 8px;
+  user-select: none;
+}
+
+.wvc-header {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.wvc-month-label {
+  flex: 1;
+  font-weight: 600;
+  text-align: center;
+}
+
+.wvc-nav-btn,
+.wvc-today-btn {
+  background: none;
+  border: none;
+  border-radius: var(--radius-s);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: var(--font-ui-small);
+  padding: 2px 6px;
+}
+
+.wvc-nav-btn {
+  font-size: 1.2em;
+}
+
+.wvc-nav-btn:hover,
+.wvc-today-btn:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+.wvc-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 2px;
+}
+
+.wvc-weekday {
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  text-align: center;
+}
+
+.wvc-grid {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.wvc-cell {
+  align-items: center;
+  border-radius: var(--radius-s);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 32px;
+  padding: 2px 0;
+}
+
+.wvc-cell:hover {
+  background: var(--background-modifier-hover);
+}
+
+.wvc-cell.wvc-empty {
+  cursor: default;
+  pointer-events: none;
+}
+
+.wvc-cell.wvc-today .wvc-day-num {
+  background: var(--interactive-accent);
+  border-radius: 50%;
+  color: var(--text-on-accent);
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  width: 22px;
+}
+
+.wvc-day-num {
+  font-size: var(--font-ui-small);
+  line-height: 22px;
+}
+
+.wvc-dot {
+  background: var(--interactive-accent);
+  border-radius: 50%;
+  height: 5px;
+  margin-top: 1px;
+  width: 5px;
+}

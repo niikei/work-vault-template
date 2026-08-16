@@ -1,0 +1,14 @@
+{
+  "pinned": [
+    "work-vault-commands:open-home",
+    "work-vault-commands:start-today",
+    "work-vault-commands:open-todays-checkpoint",
+    "work-vault-commands:open-current-weekly",
+    "work-vault-commands:open-current-monthly",
+    "work-vault-commands:open-checkpoint-review",
+    "work-vault-commands:create-jotting",
+    "work-vault-commands:create-jotting-in-new-pane",
+    "work-vault-commands:create-from-template",
+    "switcher:open"
+  ]
+}

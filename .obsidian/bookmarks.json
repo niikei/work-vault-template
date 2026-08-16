@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "ctime": 1785765968195,
+      "path": "Home.md",
+      "title": "Home"
+    },
+    {
+      "type": "file",
+      "ctime": 1785765968197,
+      "path": "00-inbox/Inbox.md",
+      "title": "Inbox"
+    },
+    {
+      "type": "folder",
+      "ctime": 1785765968200,
+      "path": "20-work",
+      "title": "Work"
+    },
+    {
+      "type": "file",
+      "ctime": 1785765968203,
+      "path": "10-checkpoints/Checkpoints.md",
+      "title": "Checkpoints"
+    },
+    {
+      "type": "file",
+      "ctime": 1785765968206,
+      "path": "40-jottings/Jottings.md",
+      "title": "Jottings"
+    },
+    {
+      "type": "search",
+      "ctime": 1785765968209,
+      "query": "task-todo:\"\"",
+      "title": "未完了タスク"
+    }
+  ]
+}

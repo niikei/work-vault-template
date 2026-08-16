@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+set -eu
+
+# Block commits that include staged files marked as confidential.
+staged_files="$(git -c core.quotepath=false diff --cached --name-only --diff-filter=ACMR)"
+if [ -z "$staged_files" ]; then
+  exit 0
+fi
+
+blocked_files=""
+while IFS= read -r file_path; do
+  [ -z "$file_path" ] && continue
+
+  # Read staged blob content, not working tree content.
+  if git show ":$file_path" | grep -Eiq '^[[:space:]]*confidential[[:space:]]*:[[:space:]]*true([[:space:]]*#.*)?$'; then
+    blocked_files="$blocked_files\n$file_path"
+  fi
+done <<EOF
+$staged_files
+EOF
+
+if [ -n "$blocked_files" ]; then
+  printf "\nCommit blocked: confidential metadata detected in staged content.\n"
+  printf "The following files contain confidential: true and cannot be committed:\n"
+  printf "%b\n" "$blocked_files"
+  printf "\nAction: remove from commit, keep the file gitignored, or change confidential metadata.\n"
+  exit 1
+fi
+
+exit 0

@@ -1,0 +1,23 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "type": "text",
+    "created": "date",
+    "updated": "date",
+    "date": "date",
+    "week": "text",
+    "week_start": "date",
+    "month": "text",
+    "month_start": "date",
+    "carryover_done": "checkbox",
+    "carried_from": "date",
+    "created_at": "datetime",
+    "due": "date",
+    "status": "text",
+    "topics": "multitext",
+    "participants": "multitext",
+    "source": "multitext"
+  }
+}

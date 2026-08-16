@@ -1,0 +1,256 @@
+﻿{
+  "general_settings": {
+    "betaFeatures": false,
+    "legacyMode": false,
+    "openBehavior": "popup",
+    "saveBehavior": "addToObsidian",
+    "showMoreActionsButton": false,
+    "silentOpen": false
+  },
+  "highlighter_settings": {
+    "alwaysShowHighlights": true,
+    "highlightBehavior": "highlight-inline",
+    "highlighterEnabled": true
+  },
+  "interpreter_settings": {
+    "defaultPromptContext": "",
+    "interpreterAutoRun": false,
+    "interpreterEnabled": false,
+    "interpreterModel": "",
+    "models": [],
+    "providers": []
+  },
+  "migrationVersion": 1,
+  "property_types": [
+    {
+      "defaultValue": "{{title}}",
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{url}}",
+      "name": "source",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{author|split:\", \"}}",
+      "name": "author",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "{{published}}",
+      "name": "published",
+      "type": "date"
+    },
+    {
+      "defaultValue": "{{date}}",
+      "name": "created",
+      "type": "date"
+    },
+    {
+      "defaultValue": "{{description}}",
+      "name": "description",
+      "type": "text"
+    },
+    {
+      "defaultValue": "clippings",
+      "name": "tags",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "record",
+      "name": "type",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{url}}",
+      "name": "source_raw",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{url}}",
+      "name": "source_canonical",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{title}}",
+      "name": "clip_title",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{title}}",
+      "name": "file_name",
+      "type": "text"
+    }
+  ],
+  "reader_settings": {
+    "appearance": "auto",
+    "autoScroll": true,
+    "blendImages": true,
+    "colorLinks": false,
+    "customCss": "",
+    "darkTheme": "same",
+    "defaultFont": "",
+    "followLinks": true,
+    "fontSize": 16,
+    "fonts": [],
+    "highlightActiveLine": true,
+    "lightTheme": "default",
+    "lineHeight": 1.6,
+    "maxWidth": 38,
+    "pinPlayer": true
+  },
+  "stats": {
+    "addToObsidian": 0,
+    "copyToClipboard": 0,
+    "saveFile": 0,
+    "share": 0
+  },
+  "template_1785831905956eqhw6jy": {
+    "schemaVersion": "0.1.0",
+    "name": "Source Capture (General)",
+    "behavior": "create",
+    "noteContentFormat": "# {{date|date:\"YYYYMMDD\"}}_{{title}}\n\n## 要点\n\n- \n\n## 統合先候補\n\n- \n\n## URL\n\n[{{url}}]({{url}})",
+    "properties": [
+      {
+        "id": "1785831959690f3drphz",
+        "name": "type",
+        "value": "record",
+        "type": "text"
+      },
+      {
+        "id": "1785831959690u5jn65y",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1785831959690garpzqb",
+        "name": "created",
+        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      },
+      {
+        "id": "1785831959690l9rg5sv",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1785831959690lxac76v",
+        "name": "source_raw",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "178583195969059a3wzz",
+        "name": "source_canonical",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1785831959690wgmblgr",
+        "name": "clip_title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1785831959690dyx1cea",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1785831959690etwg0cy",
+        "name": "tags",
+        "value": "clippings",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [],
+    "noteNameFormat": "{{date|date:\"YYYYMMDD\"}}_{{title}}",
+    "path": "00-inbox/web-clips/new/general",
+    "id": "1785831905956eqhw6jy",
+    "context": ""
+  },
+  "template_1785831959675dllz4xt": {
+    "schemaVersion": "0.1.0",
+    "name": "Source Capture (SharePoint File)",
+    "behavior": "create",
+    "noteContentFormat": "# {{date|date:\"YYYYMMDD\"}}_{{title}}\n\n## 用途\n\n- \n\n## 要点\n\n- \n\n## 統合先候補\n\n- \n\n## URL\n\n[{{url}}]({{url}})",
+    "properties": [
+      {
+        "id": "1785831959690f3drphz",
+        "name": "type",
+        "value": "record",
+        "type": "text"
+      },
+      {
+        "id": "1785831959690u5jn65y",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1785831959690garpzqb",
+        "name": "created",
+        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      },
+      {
+        "id": "1785831959690l9rg5sv",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1785831959690lxac76v",
+        "name": "source_raw",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "178583195969059a3wzz",
+        "name": "source_canonical",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1785831959690wgmblgr",
+        "name": "clip_title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1785831959690bygjaif",
+        "name": "file_name",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1785831959690dyx1cea",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1785831959690etwg0cy",
+        "name": "tags",
+        "value": "clippings",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [
+      "/^https:\\/\\/.*\\.sharepoint\\.com\\/.*$/"
+    ],
+    "noteNameFormat": "{{date|date:\"YYYYMMDD\"}}_{{title}}",
+    "path": "00-inbox/web-clips/new/sharepoint-files",
+    "id": "1785831959675dllz4xt",
+    "context": ""
+  },
+  "template_list": [
+    "1785831905956eqhw6jy",
+    "1785831959675dllz4xt"
+  ],
+  "vaults": []
+}

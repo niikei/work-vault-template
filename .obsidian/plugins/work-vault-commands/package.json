@@ -1,0 +1,26 @@
+{
+  "name": "work-vault-commands",
+  "version": "1.2.24",
+  "private": true,
+  "description": "Vault-local Obsidian commands for Work Vault.",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+    "test": "node --test --experimental-strip-types src/web-clip-dedup.test.ts src/task-carryover.test.ts src/jotting.test.ts src/template-note.test.ts"
+  },
+  "devDependencies": {
+    "@codemirror/view": "^6.38.6",
+    "@types/node": "^22.15.17",
+    "esbuild": "0.25.5",
+    "obsidian": "latest",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "markdownlint": "0.41.1"
+  },
+  "allowScripts": {
+    "esbuild@0.25.5": true
+  }
+}

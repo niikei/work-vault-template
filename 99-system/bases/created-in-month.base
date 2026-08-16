@@ -1,0 +1,12 @@
+filters:
+  and:
+    - file.ext == "md"
+    - created >= this.month_start
+    - created < this.month_start + "1M"
+views:
+  - type: table
+    name: Created in month
+    order:
+      - file.name
+      - type
+      - created

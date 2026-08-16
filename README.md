@@ -261,3 +261,7 @@ VS Codeでは`.obsidian/app.json`をplaintextとして扱う。Expo Toolsによ�
 - 個人GitHub・個人Obsidian Sync・個人Vaultへ接続しない
 
 `.gitignore`は既存のGit履歴を消さない。機密情報を誤ってコミットした場合はpushを止め、管理者へ連絡する。
+
+## License
+
+このテンプレートの独自部分は[MIT License](LICENSE)で提供する。第三者由来の内容は、それぞれの著作権表示とライセンスに従う。ChecklistのCSSに関する表示は[THIRD_PARTY_NOTICES](.obsidian/plugins/work-vault-commands/THIRD_PARTY_NOTICES.md)に記載する。
